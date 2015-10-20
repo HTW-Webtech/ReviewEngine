@@ -16,7 +16,7 @@ vim .env
 vim config/app.php
 
 # fill the database
-php artisan migrate
+php artisan migrate --seed
 ```
 
 
