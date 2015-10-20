@@ -40,7 +40,7 @@ class WidgetsController extends Controller {
             $widget->user_id = Auth::id();
             $widget->widget_type_id = ( Input::get('type') == 'feedback' ? 3 : 1 );
 
-            if ( $widget->widget_type_id == 1 && Input::has('rating_icon') && Input::get('rating_icon') == 'thumb' )
+            if ( $widget->widget_type_id == 1 && Input::has('rating_icon') && Input::get('rating_icon') == 'faces' )
                 $widget->widget_type_id = 2;
 
             $widget->save();
