@@ -1,7 +1,27 @@
-## Review Engine based on Laravel
+# Review Engine based on Laravel
 
-# Installation
-1. Clone Repo
-2. Add .env file to root dir (check https://github.com/laravel/laravel/blob/master/.env.example)
-3. Configure the App -> config/app.php
-4. Have fun :)
+
+## Installation
+
+```sh
+git clone https://github.com/HTW-Webtech/ReviewEngine
+cd ReviewEngine
+
+cp .env.example .env
+
+# configure the environment settings
+vim .env
+
+# configure the database settings (again)
+vim config/app.php
+
+# fill the database
+php artisan migrate
+```
+
+
+## Troubleshooting
+
+### Using MAMP?
+
+Add `'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',` to the `mysql` connection configuration in `config/database.php`
